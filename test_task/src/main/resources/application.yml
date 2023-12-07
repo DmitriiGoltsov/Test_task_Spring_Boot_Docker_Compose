@@ -1,0 +1,35 @@
+base-url: /api
+
+spring:
+  application:
+    name: "Task manager"
+
+  profiles:
+    active: ${APP_ENV:dev}
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.yml
+
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+  output:
+    ansi:
+      enabled: always
+
+jwt-secret-key: "myAwesome32CharacterUltraSecureAndUltraLongArchSecret"
+
+springdoc:
+  api-docs:
+    path: /swagger.html
+
+logging:
+  level:
+    root: WARN
+    org:
+      springframework:
+        # web: DEBUG
+        security: DEBUG
