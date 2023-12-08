@@ -35,7 +35,7 @@ public class UserService implements UserServiceInterface {
     @Transactional
     public User createUser(UserDto userDto) {
         if (userRepository.findUserByEmail(userDto.getEmail()).isPresent()) {
-            throw new EntityExistsException(EXCEPTION_MESSAGE_EMAIL + userDto.getEmail());
+            throw new EntityExistsException(EXCEPTION_MESSAGE_EMAIL + userDto.getEmail() + " already exists!");
         }
 
         User user = formUserFromUserDTO(userDto, new User());
