@@ -1,11 +1,14 @@
 base-url: /api
 
+server:
+  port: ${PORT:8085}
+
 spring:
   application:
     name: "Task manager"
 
   profiles:
-    active: ${APP_ENV:dev}
+    active: ${APP_ENV:prod}
 
   liquibase:
     enabled: true
