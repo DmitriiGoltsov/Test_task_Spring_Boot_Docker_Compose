@@ -2,7 +2,6 @@ package com.goltsov.test_task.test_task.controller;
 
 import com.goltsov.test_task.test_task.dto.TaskDto;
 import com.goltsov.test_task.test_task.model.Task;
-import com.goltsov.test_task.test_task.service.TaskService;
 import com.goltsov.test_task.test_task.service.TaskServiceImplementation;
 import com.querydsl.core.types.Predicate;
 

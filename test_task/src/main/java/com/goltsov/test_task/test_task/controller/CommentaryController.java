@@ -2,7 +2,6 @@ package com.goltsov.test_task.test_task.controller;
 
 import com.goltsov.test_task.test_task.dto.CommentaryDto;
 import com.goltsov.test_task.test_task.model.Commentary;
-import com.goltsov.test_task.test_task.service.CommentaryService;
 
 import com.goltsov.test_task.test_task.service.CommentaryServiceImplementation;
 import io.swagger.v3.oas.annotations.Operation;
