@@ -1,6 +1,6 @@
 databaseChangeLog:
 - changeSet:
-    id: 1701946310702-1
+    id: 1702041094108-1
     author: dmitrii (generated)
     changes:
     - createTable:
@@ -27,7 +27,7 @@ databaseChangeLog:
             type: BIGINT
         tableName: commentaries
 - changeSet:
-    id: 1701946310702-2
+    id: 1702041094108-2
     author: dmitrii (generated)
     changes:
     - createTable:
@@ -48,7 +48,7 @@ databaseChangeLog:
             type: VARCHAR(255)
         tableName: task_statuses
 - changeSet:
-    id: 1701946310702-3
+    id: 1702041094108-3
     author: dmitrii (generated)
     changes:
     - createTable:
@@ -84,7 +84,7 @@ databaseChangeLog:
             type: BIGINT
         tableName: tasks
 - changeSet:
-    id: 1701946310702-4
+    id: 1702041094108-4
     author: dmitrii (generated)
     changes:
     - createTable:
@@ -116,7 +116,7 @@ databaseChangeLog:
             type: VARCHAR(255)
         tableName: users
 - changeSet:
-    id: 1701946310702-5
+    id: 1702041094108-5
     author: dmitrii (generated)
     changes:
     - addForeignKeyConstraint:
@@ -129,7 +129,7 @@ databaseChangeLog:
         referencedTableName: task_statuses
         validate: true
 - changeSet:
-    id: 1701946310702-6
+    id: 1702041094108-6
     author: dmitrii (generated)
     changes:
     - addForeignKeyConstraint:
@@ -142,7 +142,7 @@ databaseChangeLog:
         referencedTableName: users
         validate: true
 - changeSet:
-    id: 1701946310702-7
+    id: 1702041094108-7
     author: dmitrii (generated)
     changes:
     - addForeignKeyConstraint:
@@ -155,7 +155,7 @@ databaseChangeLog:
         referencedTableName: users
         validate: true
 - changeSet:
-    id: 1701946310702-8
+    id: 1702041094108-8
     author: dmitrii (generated)
     changes:
     - addForeignKeyConstraint:
@@ -168,7 +168,7 @@ databaseChangeLog:
         referencedTableName: tasks
         validate: true
 - changeSet:
-    id: 1701946310702-9
+    id: 1702041094108-9
     author: dmitrii (generated)
     changes:
     - addForeignKeyConstraint:
