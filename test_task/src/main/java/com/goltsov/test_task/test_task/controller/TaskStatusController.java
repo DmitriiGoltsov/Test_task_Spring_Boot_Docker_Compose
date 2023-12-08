@@ -43,7 +43,7 @@ public class TaskStatusController {
 
     private final TaskStatusServiceImplementation taskStatusService;
 
-    @Operation(description = "Get all statuses of all tasks")
+    @Operation(summary = "Get all statuses of all tasks")
     @ApiResponse(responseCode = "200", description = "All task statuses are loaded",
             content = @Content(schema = @Schema(implementation = TaskStatus.class)))
     @GetMapping
@@ -51,7 +51,7 @@ public class TaskStatusController {
         return taskStatusService.getAllStatuses();
     }
 
-    @Operation(description = "Create new task status")
+    @Operation(summary = "Create new task status")
     @ApiResponse(responseCode = "201", description = "Task status was successfully created")
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(path = "")
@@ -59,7 +59,7 @@ public class TaskStatusController {
         return taskStatusService.createTaskStatus(dto);
     }
 
-    @Operation(description = "Get task status by its id")
+    @Operation(summary = "Get task status by its id")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Task status was successfully loaded"),
         @ApiResponse(responseCode = "404", description = "Task status was not found")
@@ -69,7 +69,7 @@ public class TaskStatusController {
         return taskStatusService.getTaskStatusById(id);
     }
 
-    @Operation(description = "Update user by its id")
+    @Operation(summary = "Update user by its id")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Task status was successfully updated"),
         @ApiResponse(responseCode = "404", description = "Task status was not found")
@@ -80,7 +80,7 @@ public class TaskStatusController {
         return taskStatusService.updateTaskStatus(id, dto);
     }
 
-    @Operation(description = "Delete a task status by its id")
+    @Operation(summary = "Delete a task status by its id")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Task status was deleted successfully"),
         @ApiResponse(responseCode = "404", description = "Task status was not found")

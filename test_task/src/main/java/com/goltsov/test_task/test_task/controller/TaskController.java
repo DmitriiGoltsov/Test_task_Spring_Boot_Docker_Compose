@@ -47,7 +47,7 @@ public class TaskController {
 
     private final TaskServiceImplementation taskService;
 
-    @Operation(description = "Get all tasks of all authors")
+    @Operation(summary = "Get all tasks of all authors")
     @ApiResponse(responseCode = "200", description = "5 tasks on a requested page are loaded")
     @GetMapping
     public Iterable<Task> getAllTasksByCriteria(@QuerydslPredicate(root = Task.class) final Predicate predicate,
@@ -55,7 +55,7 @@ public class TaskController {
         return taskService.getAllTasksByCriteria(predicate, Objects.requireNonNullElse(pageNumber, 0));
     }
 
-    @Operation(description = "Get a particular task by its id")
+    @Operation(summary = "Get a particular task by its id")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "The task was found and loaded"),
         @ApiResponse(responseCode = "404", description = "Task with such id does not exist")
@@ -65,7 +65,7 @@ public class TaskController {
         return taskService.getTaskById(id);
     }
 
-    @Operation(description = "Create a new task")
+    @Operation(summary = "Create a new task")
     @ApiResponse(responseCode = "201", description = "Task was successfully created")
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
@@ -75,7 +75,7 @@ public class TaskController {
         return taskService.createNewTask(taskDTO);
     }
 
-    @Operation(description = "Update task by uts id")
+    @Operation(summary = "Update task by uts id")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Task updated"),
         @ApiResponse(responseCode = "404", description = "Task with this ID not found")
@@ -88,7 +88,7 @@ public class TaskController {
         return taskService.updateTask(id, taskDTO);
     }
 
-    @Operation(description = "Delete task by its id")
+    @Operation(summary = "Delete task by its id")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Task was deleted"),
         @ApiResponse(responseCode = "404", description = "Task with such id is not found")
