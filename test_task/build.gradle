@@ -10,8 +10,8 @@ plugins {
     id 'jacoco'
 }
 
-group = 'hexlet.code'
-version = '1.0-SNAPSHOT'
+group = 'com.goltsov.test_task.test_task'
+version = '1.0'
 
 java {
     sourceCompatibility = '17'
@@ -28,7 +28,7 @@ wrapper {
 }
 
 application {
-    mainClass = 'hexlet.code.AppApplication'
+    mainClass = 'com.goltsov.test_task.test_task.TestTaskApplication'
 }
 
 
@@ -127,7 +127,6 @@ diffChangelog {
     dependsOn compileJava
 }
 
-// Настраиваем Liquibase
 liquibase {
     activities {
         main {
