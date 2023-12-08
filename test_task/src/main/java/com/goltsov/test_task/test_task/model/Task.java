@@ -30,6 +30,8 @@ import lombok.Setter;
 import lombok.Builder;
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -63,10 +65,12 @@ public class Task {
 
     @ManyToOne
     @JoinColumn(name = "author_id", referencedColumnName = "id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private User author;
 
     @ManyToOne
     @JoinColumn(name = "executor_id", referencedColumnName = "id")
+    @OnDelete(action = OnDeleteAction.SET_NULL)
     private User executor;
 
     @CreationTimestamp
