@@ -1,1 +1,36 @@
-# Test_task_Spring_Boot_Docker_Compose
+# A test application on Spring Boot and Docker Compose
+
+Настоящее приложение написано в качестве тестового задания для вакансии Junior Java developer
+в компанию Effective Mobile.
+
+## Инструкции по запуску.
+
+Для запуска приложение требуется установленный Docker
+
+1) Скачайте приложение используя Git.
+2) Перейдите в папку, куда было скачано приложение и введите следующие команды:
+
+Для создания .jar файла
+
+```
+gradle installBootDist 
+```
+
+Для создания Docker `image` настоящей программы
+
+```
+docker build -f Dockerfile -t test_task-1.0 .
+```
+
+
+Для окончательной сборки и запуска приложения. 
+
+```
+docker compose up 
+```
+
+После этого приложение запустится на порте 8085. Проверить работоспособность API можно через Postman. 
+
+Описание API можно посмотреть указав в адресной строке браузера:
+
+`http://localhost:8085/swagger-ui/index.html`
