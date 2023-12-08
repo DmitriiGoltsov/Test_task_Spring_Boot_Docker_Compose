@@ -4,6 +4,7 @@ import com.goltsov.test_task.test_task.dto.LoginDto;
 import com.goltsov.test_task.test_task.service.CustomUserDetailService;
 import com.goltsov.test_task.test_task.util.JwtUtils;
 
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.servlet.http.HttpServletResponse;
 
 import lombok.AllArgsConstructor;
@@ -29,6 +30,7 @@ public class AuthenticationController {
 
     private final JwtUtils jwtUtils;
 
+    @Operation(summary = "Process an authentication of a user")
     @PostMapping(path = "/login")
     public ResponseEntity<String> authenticate(@RequestBody LoginDto request) {
 
